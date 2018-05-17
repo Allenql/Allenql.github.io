@@ -1,36 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>浅谈Java中的多态</title>
+    <title>News Theme blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Old+Standard+TT" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT:400,500,700" rel="stylesheet">
+    <!--    <link rel="stylesheet" type="text/css" href="css/animate.css" /> -->
+    <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css" />
+    <link href="css/jquery.bsPhotoGallery.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
+
 <body>
-<pre style="font-size: 24px">
-Java中面向对象的三大特性：封装、继承、多态
-
-在认识多态之前，需要先掌握继承的概念
-
-继承--extends
-Java是单继承，意思就是一个子类只能有一个父类。
-如果一个类没有显示继承某一个类，那么这个类将继承Object。
-补充：继承的好处是 减少代码的冗余量
-
-例：创建两个普通类  Person（父类）  Student（子类）
-<img src="images/001.bmp">
-接下来让Student类继承Person类
-<img src="images/002.bmp">
-此处只是举例，没有写相应的属性和方法。
-如果Person中有非私有属性和方法，那么这些非私有的属性和方法都会被Student继承过来。
-
-下面就是本文的核心内容
-多态
-对于多态，按字面来理解的话，就是一个物体的多种形态。如果去看比较官方的概念，那么可能会使你陷入迷茫的状态。
-我说一个通俗易懂的概念：所谓多态，就是继承链中上层类的对象指向下层类的空间。
-以刚才的Person和Student为例，Person和Student就构成了一个继承链，Person就
-属于继承链中的上层类，而Student就是下层类（下层类可以有多个，只要在继承链上）。
-下面用一张图来体现这个概念
-    <img src="images/003.bmp">
-</pre>
-<input type="button" value="返回" onclick="javascript:window.history.go(-1)" style="font-size: 24px;">
+    <header class="static-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-12 share-sec">
+                    <ul>
+                        <li>
+                            <a href=""> <span class="fab fa-facebook"></span></a>
+                        </li>
+                        <li>
+                            <a href=""> <span class="fab fa-instagram"></span></a>
+                        </li>
+                        <li>
+                            <a href=""> <span class="fab fa-twitter"></span></a>
+                        </li>
+                        <li>
+                            <a href=""> <span class="fab fa-pinterest"></span></a>
+                        </li>
+                        <li>
+                            <a href=""> <span class="fab fa-google-plus-g"></span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 col-md-4 col-sm-4 col-8 singnature">
+                    <img src="images/signature.png" alt="sign">
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-4 col-12 cv-sec">
+                    <a href="#" class="download-sec right">Download Resume</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="blod-inner-sec">
+        <div class="container">
+            <h1>我的博客</h1>
+            <h5>每一篇博客都是我的经历，我的学习经验，可能对你有益，亦会无益，阅之受益</h5>
+            <div class="blog-sec">
+                <div class="row blog-posts">
+                    <div class="col-md-6 left-sec">
+                        <div class="blog-item">
+                            <h3>浅谈Java中的多态</h3>
+                            <h5>继承链上层类的对象指向下层类的空间.</h5>
+                            <a href="essay.html">更多</a>
+                            <span class="icon-sec"><i class="far fa-newspaper"></i></span>
+                        </div>
+                        <div class="blog-item">
+                            <h3>Beautiful road like waterfall in the california of south most beautiful view.</h3>
+                            <h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem type specimen book. It not only five</h5>
+                            <a href="#">Read More</a>
+                            <span class="icon-sec"><i class="far fa-newspaper"></i></span>
+                        </div>
+                        <div class="blog-item">
+                            <h3>Beautiful road like waterfall in the california of south most beautiful view.</h3>
+                            <h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem type specimen book. It not only five</h5>
+                            <a href="#">Read More</a>
+                            <span class="icon-sec"><i class="far fa-newspaper"></i></span>
+                        </div>
+                        <div class="blog-item">
+                            <h3>Beautiful road like waterfall in the california of south most beautiful view.</h3>
+                            <h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem type specimen book. It not only five</h5>
+                            <a href="#">Read More</a>
+                            <span class="icon-sec"><i class="far fa-newspaper"></i></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 right-sec">
+                        <div class="blog-item">
+                            <h3>Beautiful road like waterfall in the california of south most beautiful view.</h3>
+                            <h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem type specimen book. It not only five</h5>
+                            <a href="#">Read More</a>
+                            <span class="icon-sec"><i class="far fa-newspaper"></i></span>
+                        </div>
+                        <div class="blog-item">
+                            <h3>Beautiful road like waterfall in the california of south most beautiful view.</h3>
+                            <h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem type specimen book. It not only five</h5>
+                            <a href="#">Read More</a>
+                            <span class="icon-sec"><i class="far fa-newspaper"></i></span>
+                        </div>
+                        <div class="blog-item">
+                            <h3>Beautiful road like waterfall in the california of south most beautiful view.</h3>
+                            <h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem type specimen book. It not only five</h5>
+                            <a href="#">Read More</a>
+                            <span class="icon-sec"><i class="far fa-newspaper"></i></span>
+                        </div>
+                        <div class="blog-item">
+                            <h3>Beautiful road like waterfall in the california of south most beautiful view.</h3>
+                            <h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem type specimen book. It not only five</h5>
+                            <a href="#">Read More</a>
+                            <span class="icon-sec"><i class="far fa-newspaper"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="load-more">
+                    <button>load more</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-4 ">
+                    <img src="images/footer-sign.png" alt="sign">
+                </div>
+                <div class="col-md-6 col-sm-8">
+                    <h6 class="right copy-right">Copyright &copy; 2018.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></h6>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js">
+    </script>
+    <script src="js/all.js"></script>
+    <script src="js/jquery.mixitup.min.js"></script>
+    <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="js/jquery.isotope.js"></script>
+    <script src="js/jquery.bsPhotoGallery.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('ul.first').bsPhotoGallery({
+            "classes": "col-md-3 col-sm-4 col-2 ",
+            "hasModal": true,
+            // "fullHeight" : false
+        });
+    });
+    </script>
 </body>
+
 </html>
